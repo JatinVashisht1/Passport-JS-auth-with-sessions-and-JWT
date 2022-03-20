@@ -8,7 +8,7 @@
 
 
 # Chapter 1: Topics and Prerequisites
-
+---
 ## What is Passport JS
 ### 1. Welcome to Express Middlewares!
 
