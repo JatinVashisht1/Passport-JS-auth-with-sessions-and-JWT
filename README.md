@@ -62,7 +62,7 @@ If the user is authenticated then only passport will let that user access the re
 ### Response Headers
 - HTTP headers are basically meta-data about our HTTP request.
 - We can do similar things in response also, which would be set by server
-- Server that we have requested data from, for example [google](www.google.com) here will set the response headers.
+- Server that we have requested data from, for example [google](https://www.google.com) here will set the response headers.
 - The response headers will give additional instructions to the client that requested the data.
 
 ## `set cookie` Header
@@ -73,7 +73,7 @@ If the user is authenticated then only passport will let that user access the re
 - If we don't have these type of persistance storage then everytime we refresh the page the previous stage, i.e, login process have to be redone.
 - This is why we use `set cookie` and `cookie` header
 - Once the browser will get cookie, it will attach it with the request headers to all the domains to which cookie belong to and it let the server know that the user has already logged in.
-- Client->get req to [google](www.google.com)->[google](www.google.com) server sets cookie in the client's browser via response header
+- Client->get req to [google](https://www.google.com)->[google](https://www.google.com) server sets cookie in the client's browser via response header
 - So when we will refresh the page the browser will see what cookies are currently set in our browser and I will attach those cookies to every single request for the domain/context that is applicable to, for example google.com
 - The this method of sending and receiving cookies is a powerfull way of authenticating users.
 
