@@ -1,9 +1,9 @@
 # Some basic points
 ---
-1. There is big difference between authorization and authentication.
-2. JWTs, local login, session based authentication is all about who the user is.
-3. Authorization is like sigin with google, facebook, etc. Its like we don't care about who we are talking to but who has access to what resources.
-4. In this tut we will be talking about session and JWTs.
+- There is big difference between authorization and authentication.
+- JWTs, local login, session based authentication is all about who the user is.
+- Authorization is like sigin with google, facebook, etc. Its like we don't care about who we are talking to but who has access to what resources.
+- In this tut we will be talking about session and JWTs.
 
 
 
