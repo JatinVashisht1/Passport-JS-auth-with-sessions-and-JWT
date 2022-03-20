@@ -1,5 +1,4 @@
 # Some basic points
-***
 ---
 - There is big difference between authorization and authentication.
 - JWTs, local login, session based authentication is all about who the user is.
@@ -9,7 +8,7 @@
 
 
 # Chapter 1: Topics and Prerequisites
-***
+---
 ## What is Passport JS
 ### 1. Welcome to Express Middlewares!
 
