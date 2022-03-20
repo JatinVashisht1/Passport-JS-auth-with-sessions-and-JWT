@@ -13,7 +13,8 @@
 ### What is Passport JS
 #### 1. Welcome to Express Middlewares!
 
-    a) On each HTTP request, Passport will use a "Strategy" to determine whether the requestor has permission to view that resource.
+    a) On each HTTP request, Passport will use a "Strategy" 
+    to determine whether the requestor has permission to view that resource.
 
     b) If the user does not have a permission, a 401 Unauthorized Error is thrown.
 
