@@ -24,8 +24,8 @@
 
     b) The Passport Local Strategy utilized Cookies, Express Sessions, and some authentication logic.
 #### 3. Passport JS in laymen language 
-Passport JS is just a framework, that is a middleware that also allows individual developers to develop other middlewares called strategies that connect in to bigger middleware we called passport js framework. And then all of that is wrapped up into a bundle and can be used easily into our express app.
+    a)Passport JS is just a framework, that is a middleware that also allows individual developers to develop other middlewares called strategies that connect in to bigger middleware we called passport js framework. And then all of that is wrapped up into a bundle and can be used easily into our express app.
 
 #### 4. Summary of what is Passport JS
-In short, passport js is just a middleware and on every http request that a user calls to our express server the passport framework is going to first pickup what strategy we are using here and then it will use that strategy to validate if the user is authenticated or not.
-If the user is authenticated then only passport will let that user access the requested resource.
+    a) In short, passport js is just a middleware and on every http request that a user calls to our express server the passport framework is going to first pickup what strategy we are using here and then it will use that strategy to validate if the user is authenticated or not.
+    If the user is authenticated then only passport will let that user access the requested resource.
