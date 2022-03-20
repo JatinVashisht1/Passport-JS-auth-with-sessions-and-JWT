@@ -12,7 +12,8 @@
   - [Request Headers](#request-headers)
   - [Response Headers](#response-headers)
 - [`set cookie` Header](#set-cookie-header)
-
+  - [Summary of `set cookie` and `cookie` header](#summary-of-set-cookie-and-cookie-header)
+  
 # Some basic points
 ---
 - There is big difference between authorization and authentication.
@@ -67,3 +68,18 @@ If the user is authenticated then only passport will let that user access the re
 ## `set cookie` Header
 - It generally gives key value pairs
 - HTTP protocol is a stateless protocol, in laymen language, it constantly forgets what user has done on the site unless we have a way to remember that.
+- Cookies are used on server-side as well as on client-side
+- In simple terms, the server will see the credentials and if they are correct the server will send some data to client/browser to let it remember that the user has logged in 
+- If we don't have these type of persistance storage then everytime we refresh the page the previous stage, i.e, login process have to be redone.
+- This is why we use `set cookie` and `cookie` header
+- Once the browser will get cookie, it will attach it with the request headers to all the domains to which cookie belong to and it let the server know that the user has already logged in.
+- Client->get req to [google](www.google.com)->[google](www.google.com) server sets cookie in the client's browser via response header
+- So when we will refresh the page the browser will see what cookies are currently set in our browser and I will attach those cookies to every single request for the domain/context that is applicable to, for example google.com
+- The this method of sending and receiving cookies is a powerfull way of authenticating users.
+
+### Summary of `set cookie` and `cookie` header
+- once the user is authenticated correctly, server will set a cokkie corresponding to it and will send it back as response
+- next time user will refresh the page or do something related to it, browser will first check if it have any cookie available.
+- So the server will only have to valid cookie in order to make client access the data.
+- Therefore, in this way we don't have to re-loggin the user again and again.
+- We can also set expiry date to the cookies.
