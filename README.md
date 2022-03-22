@@ -83,3 +83,7 @@ If the user is authenticated then only passport will let that user access the re
 - So the server will only have to valid cookie in order to make client access the data.
 - Therefore, in this way we don't have to re-loggin the user again and again.
 - We can also set expiry date to the cookies.
+
+# Chapter 3: Intro to Express Middleware
+## Why to learn about middleware?
+- because both passport.js and express sessions are middlewares.
