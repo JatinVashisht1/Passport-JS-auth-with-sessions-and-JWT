@@ -87,3 +87,94 @@ If the user is authenticated then only passport will let that user access the re
 # Chapter 3: Intro to Express Middleware
 ## Why to learn about middleware?
 - because both passport.js and express sessions are middlewares.
+- below is a very basic way to run a node application
+```
+const express = require('express');
+const app = express();
+app.listen(3000)
+```
+- usual signature of middleware:
+` function (req, res, next)`
+- here req means request, res means response and next means next middleware, express will automatically call the next middleware when execution of current one will finish
+- In our get ('/') route we can also pass a function from outside if we don't want to define it in the parameter.
+- for example:
+```
+function standardExpressCallback(reqObject, resObject, nextMiddleware){
+    resObject.send("<h1>This is home page</h1>")
+}
+app.get('/', standardExpressCallback)
+```
+- just like we defined function standardExpressCallback, we can define other functions called **middlewares**
+
+## Defining middleware
+- There can be two types of middlewares
+  - Route specific middleware
+  - Global middleware
+- **NOTE**
+  - The **order** of defining middleware whether it is global or route specific really **matters**
+### Route specific middleware
+- below is an example of route spefic middleware
+```
+// this is an exmple of middleware
+function middleware1(req, res, next){
+    console.log("I am a middleware");
+    next();
+}
+// this is how we call middleware
+app.get('/', middleware1 ,standardExpressCallback)
+```
+### Global Middleware
+- We can declare a middleware globaly, the signature of the global middleware is same as we define route specific middleware
+- To decalre a global middleware just write app.use(**middleware_name**) after we initialize our express app
+- below is an example of global middleware
+```
+const app = express();
+
+// this is the way to declare middleware globaly
+// this means that this is the first middleware that we want to use in all of our routes
+app.use(middleware2)
+
+// our global middleware
+function middleware2(req, res, next){
+    console.log("I am middleware2")
+    next()
+}
+```
+- Global middleware will be called everytime our app will receive a request!
+
+## Error handler middleware
+- This is different type of middleware because it takes an extra parameter to know about error
+### Example of error handler
+```
+function errorHandler(err, req, res, next){
+    // handle error
+}
+```
+- we should try to declare the usage of error handler at the end because then if our app encounters error then it will just call the last error handler
+
+## Moulding properties in middlewares
+- we can also customize the properties in a middleware and that properties will also be available to the next middleware in queue
+- for example
+```
+app.use(middleware2)
+app.use(middleware3)
+
+function middleware2(req, res, next){
+  req.customProperty = 100;
+  // now the customProperty will also be passed to next middlewares
+  next()
+}
+
+// we can access the customProperty in next middlewares as:
+req.customProperty
+```
+## How passport.js will work?
+- The working of passport.js can be easily explained by how custom properties work in middlewares
+- The passport.js will take the req object and will append some properties to it 
+
+## Conclusion about middleware
+- Middleware is an amazing concept and it makes our code much more readable and understandable
+- This also helps us to add new features very easily like authentication and authorization
+- It can also be used in checking if the users have administrator rights. 
+  - If the user will have administrator rights then it will take user forward 
+  - and if user doesn't have admin rights then we can show him some error like 401.
