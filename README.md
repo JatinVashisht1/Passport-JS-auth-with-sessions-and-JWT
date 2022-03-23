@@ -25,7 +25,6 @@
   - [Conclusion about middleware](#conclusion-about-middleware)
 
 # Some basic points
----
 - There is big difference between authorization and authentication.
 - JWTs, local login, session based authentication is all about who the user is.
 - Authorization is like sigin with google, facebook, etc. Its like we don't care about who we are talking to but who has access to what resources.
