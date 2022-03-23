@@ -33,7 +33,6 @@
 
 
 # Chapter 1: Topics and Prerequisites
----
 ## What is Passport JS
 ### 1. Welcome to Express Middlewares!
 
@@ -57,7 +56,6 @@ to determine whether the requestor has permission to view that resource.
 If the user is authenticated then only passport will let that user access the requested resource.
 
 # Chapter 2: Intro to HTTP Headers and Cookies
----
 ## What is a HTTP Header?
 - Headers is a whole big topic and it is not in the scope of this lecture.
 - But we have to learn specifically about a HTTP header called `set cookie` in the cookie header in order to learn about how server side sessions work and interact with browser.
