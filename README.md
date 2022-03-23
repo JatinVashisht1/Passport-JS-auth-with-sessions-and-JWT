@@ -1,6 +1,6 @@
 ### Index 
 - [Some basic points](#some-basic-points)
-- [#Chapter 1: Topics and Prerequisites](#chapter-1-topics-and-prerequisites)
+- [Chapter 1: Topics and Prerequisites](#chapter-1-topics-and-prerequisites)
 - [What is Passport JS](#what-is-passport-js)
   - [1. Welcome to Express Middlewares!](#1-welcome-to-express-middlewares)
   - [2. Passport Strategies?](#2-passport-strategies)
@@ -23,9 +23,6 @@
   - [Moulding properties in middlewares](#moulding-properties-in-middlewares)
   - [How passport.js will work?](#how-passportjs-will-work)
   - [Conclusion about middleware](#conclusion-about-middleware)
-
-
-
 
 # Some basic points
 ---
