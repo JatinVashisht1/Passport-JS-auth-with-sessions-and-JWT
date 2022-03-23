@@ -1,19 +1,32 @@
 
-- [# Some basic points](#-some-basic-points)
-- [# Chapter 1: Topics and Prerequisites](#-chapter-1-topics-and-prerequisites)
+- [Some basic points](#some-basic-points)
+- [#Chapter 1: Topics and Prerequisites](#chapter-1-topics-and-prerequisites)
 - [What is Passport JS](#what-is-passport-js)
   - [1. Welcome to Express Middlewares!](#1-welcome-to-express-middlewares)
   - [2. Passport Strategies?](#2-passport-strategies)
   - [3. Passport JS in laymen language](#3-passport-js-in-laymen-language)
   - [4. Summary of what is Passport JS](#4-summary-of-what-is-passport-js)
-- [# Chapter 2: Intro to HTTP Headers and Cookies](#-chapter-2-intro-to-http-headers-and-cookies)
+- [Chapter 2: Intro to HTTP Headers and Cookies](#chapter-2-intro-to-http-headers-and-cookies)
 - [What is a HTTP Header?](#what-is-a-http-header)
   - [General Headers](#general-headers)
   - [Request Headers](#request-headers)
   - [Response Headers](#response-headers)
 - [`set cookie` Header](#set-cookie-header)
   - [Summary of `set cookie` and `cookie` header](#summary-of-set-cookie-and-cookie-header)
-  
+- [Chapter 3: Intro to Express Middleware](#chapter-3-intro-to-express-middleware)
+  - [Why to learn about middleware?](#why-to-learn-about-middleware)
+  - [Defining middleware](#defining-middleware)
+    - [Route specific middleware](#route-specific-middleware)
+    - [Global Middleware](#global-middleware)
+  - [Error handler middleware](#error-handler-middleware)
+    - [Example of error handler](#example-of-error-handler)
+  - [Moulding properties in middlewares](#moulding-properties-in-middlewares)
+  - [How passport.js will work?](#how-passportjs-will-work)
+  - [Conclusion about middleware](#conclusion-about-middleware)
+
+
+
+
 # Some basic points
 ---
 - There is big difference between authorization and authentication.
