@@ -49,3 +49,35 @@
 }));
 
 ```
+## flow of data after implementing express session
+### Explaination of express-session options
+- secret is usually stored in environment variable and we won't want to expose it to the public
+- resave and saveinitialized are the options related to what does the session do if nothing is changed and it tells middleware how to react to different events in the browser 
+- maxAge is like the expiration time of cookie in millis
+
+### Basic architecture of express-session
+#### Client side changes
+- When we will send a http get request to our route, the session middleware will initialize a session.
+- Then it will take that session id and set the cookie equal to the session id 
+- The cookie is then going to be put in HTTP header as set-cookie parameter or value 
+- And then HTTP header will be in response header and the browser will receive the response
+- Then browser will see that server wants browser to set cookie and will set the cookie value to that specified
+- And now every time we refresh, that cookie will be a part of that request 
+#### Server side changes when we will refresh
+- The express session will get the cookie on every request and it will look the cookie value/id in the session store(database here).
+- And if the session is valid it will use info from the session else redirect it to the route specified.
+- Everytime the server will get the cookie with session id attached to it, it will get that session from the database and it will get all the information about that session and it can be used to whatever we have instructed.
+- we can also see how many visits the user has made to our server.
+```
+// To se how many visits user has made
+app.get('/', (req, res, next)=>{
+    if(req.session.viewCount){
+        req.session.viewCount++;
+    }else{
+        res.session.viewCount = 1
+    }
+    res.send(`<h1>you have visited this page ${req.session.viewCount} times`)
+});
+```
+- In the above code snippet when we set the `req.session.viewCount` property it persisted in the database or session store
+- Now we can get an idea how passport js middleware will connect to express-session middleware to keep its own data
