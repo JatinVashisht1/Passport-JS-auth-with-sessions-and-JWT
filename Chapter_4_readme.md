@@ -1,14 +1,14 @@
 # Intro to Express Sessions
 - When we use passport local strategy it uses express session under the hood
 - **What is difference between session and cookie?**
-- Session and cookie are different in the place their data is stored
-- `Cookie`
-    - It have its data stored in browser
-    - The browser is going to attach that cookie to every http request that it does
-- `Session`
-    - Session is stored on the server side
-    - Session can store bigger type of data than cookie
-    - We cannot store user credentials sor secret info in cookies as they can be easily intercepted and can lead to data breach.
+    - Session and cookie are different in the place their data is stored
+    - `Cookie`
+        - It have its data stored in browser
+        - The browser is going to attach that cookie to every http request that it does
+    - `Session`
+        - Session is stored on the server side
+        - Session can store bigger type of data than cookie
+        - We cannot store user credentials sor secret info in cookies as they can be easily intercepted and can lead to data breach.
 ### [Session store implementation](https://www.npmjs.com/package/express-session)
 - In actual production environment we should be having an actual database storing the info. of sessions
 - By using express-session uses its own session but it is not using database under the hood, instead using memory that is local to your application known as in-memory database
